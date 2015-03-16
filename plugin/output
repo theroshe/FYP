@@ -1,0 +1,31 @@
+ <var_decl 0x7f56231634c0 sys_nerr
+    type <integer_type 0x7f5623016690 int public SI
+        size <integer_cst 0x7f56230183c0 constant 32>
+        unit size <integer_cst 0x7f56230183e0 constant 4>
+        align 32 symtab 0 alias set -1 canonical type 0x7f5623016690 precision 32 min <integer_cst 0x7f5623018360 -2147483648> max <integer_cst 0x7f5623018380 2147483647>
+        pointer_to_this <pointer_type 0x7f5623022738>>
+    public external in_system_header common SI defer-output file /usr/include/bits/sys_errlist.h line 26 col 12 size <integer_cst 0x7f56230183c0 32> unit size <integer_cst 0x7f56230183e0 4>
+    align 32>
+main.c: In function 'main':
+main.c:18:10: warning: 'bit_band' attribute directive ignored [-Wattributes]
+   struct test_t test __attribute__((bit_band(5))); //Apply bit banding to this struct
+          ^
+main.c:19:3: warning: 'bit_band' attribute directive ignored [-Wattributes]
+   int i __attribute__((bit_band())); //Apply to an int to test plugin's type detection
+   ^
+ <var_decl 0x7f5623163d10 i
+    type <integer_type 0x7f5623016690 int public SI
+        size <integer_cst 0x7f56230183c0 constant 32>
+        unit size <integer_cst 0x7f56230183e0 constant 4>
+        align 32 symtab 0 alias set -1 canonical type 0x7f5623016690 precision 32 min <integer_cst 0x7f5623018360 -2147483648> max <integer_cst 0x7f5623018380 2147483647>
+        pointer_to_this <pointer_type 0x7f5623022738>>
+    SI file main.c line 19 col 7 size <integer_cst 0x7f56230183c0 32> unit size <integer_cst 0x7f56230183e0 4>
+    align 32 context <function_decl 0x7f5623194e00 main>>
+ <var_decl 0x7f5623163da8 j
+    type <integer_type 0x7f5623016690 int public SI
+        size <integer_cst 0x7f56230183c0 constant 32>
+        unit size <integer_cst 0x7f56230183e0 constant 4>
+        align 32 symtab 0 alias set -1 canonical type 0x7f5623016690 precision 32 min <integer_cst 0x7f5623018360 -2147483648> max <integer_cst 0x7f5623018380 2147483647>
+        pointer_to_this <pointer_type 0x7f5623022738>>
+    SI file main.c line 20 col 7 size <integer_cst 0x7f56230183c0 32> unit size <integer_cst 0x7f56230183e0 4>
+    align 32 context <function_decl 0x7f5623194e00 main>>

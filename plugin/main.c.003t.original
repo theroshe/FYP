@@ -1,0 +1,119 @@
+
+;; Function main (null)
+;; enabled by -tree-original
+
+@1      bind_expr        type: @2       vars: @3       body: @4      
+@2      void_type        name: @5       algn: 8       
+@3      type_decl        type: @6       scpe: @7       srcp: main.c:5      
+@4      statement_list   0   : @8       1   : @9       2   : @10     
+                         3   : @11      4   : @12      5   : @13     
+                         6   : @14      7   : @15     
+@5      type_decl        name: @16      type: @2      
+@6      record_type      name: @17      size: @18      algn: 32      
+                         tag : struct   flds: @19     
+@7      function_decl    name: @20      type: @21      srcp: main.c:3      
+                         link: extern  
+@8      decl_expr        type: @2      
+@9      decl_expr        type: @2      
+@10     decl_expr        type: @2      
+@11     decl_expr        type: @2      
+@12     modify_expr      type: @22      op 0: @23      op 1: @24     
+@13     modify_expr      type: @22      op 0: @25      op 1: @26     
+@14     call_expr        type: @27      fn  : @28      0   : @29     
+                         1   : @30      2   : @31     
+@15     return_expr      type: @2       expr: @32     
+@16     identifier_node  strg: void     lngt: 4       
+@17     identifier_node  strg: test_t   lngt: 6       
+@18     integer_cst      type: @33      low : 32      
+@19     field_decl       name: @34      type: @22      scpe: @6      
+                         srcp: main.c:6                bitfield      
+                         size: @35      algn: 1        bpos: @36     
+@20     identifier_node  strg: main     lngt: 4       
+@21     function_type    unql: @37      size: @38      algn: 8       
+                         retn: @27     
+@22     integer_type     size: @38      algn: 8        prec: 1       
+                         sign: unsigned min : @24      max : @26     
+@23     component_ref    type: @22      op 0: @39      op 1: @40     
+@24     integer_cst      type: @22      low : 0       
+@25     component_ref    type: @22      op 0: @39      op 1: @41     
+@26     integer_cst      type: @22      low : 1       
+@27     integer_type     name: @42      size: @18      algn: 32      
+                         prec: 32       sign: signed   min : @43     
+                         max : @44     
+@28     addr_expr        type: @45      op 0: @46     
+@29     nop_expr         type: @47      op 0: @48     
+@30     convert_expr     type: @27      op 0: @49     
+@31     convert_expr     type: @27      op 0: @50     
+@32     modify_expr      type: @27      op 0: @51      op 1: @52     
+@33     integer_type     name: @53      size: @54      algn: 128     
+                         prec: 128      sign: unsigned min : @36     
+                         max : @55     
+@34     identifier_node  strg: a        lngt: 1       
+@35     integer_cst      type: @33      low : 1       
+@36     integer_cst      type: @33      low : 0       
+@37     function_type    size: @38      algn: 8        retn: @27     
+@38     integer_cst      type: @33      low : 8       
+@39     var_decl         name: @56      type: @6       scpe: @7      
+                         srcp: main.c:18               size: @18     
+                         algn: 32       used: 1       
+@40     field_decl       name: @57      type: @22      scpe: @6      
+                         srcp: main.c:14               bitfield      
+                         size: @35      algn: 1        bpos: @38     
+@41     field_decl       name: @58      type: @22      scpe: @6      
+                         srcp: main.c:15               bitfield      
+                         size: @35      algn: 1        bpos: @59     
+@42     type_decl        name: @60      type: @27     
+@43     integer_cst      type: @27      high: -1       low : -2147483648 
+@44     integer_cst      type: @27      low : 2147483647 
+@45     pointer_type     size: @61      algn: 64       ptd : @62     
+@46     function_decl    name: @63      type: @62      srcp: stdio.h:362    
+                         body: undefined               link: extern  
+@47     pointer_type     qual:   r      unql: @64      size: @61     
+                         algn: 64       ptd : @65     
+@48     addr_expr        type: @66      op 0: @67     
+@49     component_ref    type: @22      op 0: @39      op 1: @40     
+@50     component_ref    type: @22      op 0: @39      op 1: @41     
+@51     result_decl      type: @27      scpe: @7       srcp: main.c:3      
+                         note: artificial              size: @18     
+                         algn: 32      
+@52     integer_cst      type: @27      low : 0       
+@53     identifier_node  strg: bitsizetype             lngt: 11      
+@54     integer_cst      type: @33      low : 128     
+@55     integer_cst      type: @33      high: -1       low : -1      
+@56     identifier_node  strg: test     lngt: 4       
+@57     identifier_node  strg: i        lngt: 1       
+@58     identifier_node  strg: j        lngt: 1       
+@59     integer_cst      type: @33      low : 9       
+@60     identifier_node  strg: int      lngt: 3       
+@61     integer_cst      type: @33      low : 64      
+@62     function_type    size: @38      algn: 8        retn: @27     
+                         prms: @68     
+@63     identifier_node  strg: printf   lngt: 6       
+@64     pointer_type     size: @61      algn: 64       ptd : @65     
+@65     integer_type     qual: c        name: @69      unql: @70     
+                         size: @38      algn: 8        prec: 8       
+                         sign: signed   min : @71      max : @72     
+@66     pointer_type     size: @61      algn: 64       ptd : @73     
+@67     string_cst       type: @73     strg: i = %d	j = %d
+  lngt: 15      
+@68     tree_list        valu: @47     
+@69     type_decl        name: @74      type: @70     
+@70     integer_type     name: @69      size: @38      algn: 8       
+                         prec: 8        sign: signed   min : @71     
+                         max : @72     
+@71     integer_cst      type: @70      high: -1       low : -128    
+@72     integer_cst      type: @70      low : 127     
+@73     array_type       size: @75      algn: 8        elts: @70     
+                         domn: @76     
+@74     identifier_node  strg: char     lngt: 4       
+@75     integer_cst      type: @33      low : 120     
+@76     integer_type     size: @61      algn: 64       prec: 64      
+                         sign: signed   min : @77      max : @78     
+@77     integer_cst      type: @79      low : 0       
+@78     integer_cst      type: @79      low : 14      
+@79     integer_type     name: @80      size: @61      algn: 64      
+                         prec: 64       sign: unsigned min : @77     
+                         max : @81     
+@80     identifier_node  strg: sizetype lngt: 8       
+@81     integer_cst      type: @79      low : -1      
+
