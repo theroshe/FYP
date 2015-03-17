@@ -1,8 +1,9 @@
 #!/bin/bash
 
-GCCVER=4.9.1
+GCCVER=4.9.2
 
-PREFIX="$(pwd)/gcc/output"
+BUILD="$(pwd)/gcc/output"
+INSTALL="$(pwd)/install"
 
 if [ ! -d gcc ]; then
 	mkdir gcc
@@ -18,19 +19,19 @@ if [ ! -d gcc-$GCCVER ]; then
 	tar -xvf gcc-$GCCVER.tar.gz
 fi
 
-if [ ! -d $PREFIX ]; then
-	mkdir $PREFIX
+if [ ! -d $BUILD ]; then
+	mkdir $BUILD
 fi
 
 if [ ! -f gcc-$GCCVER/mpfr ]; then
 	cd gcc-$GCCVER
-#	./contrib/download_prerequisites
+	./contrib/download_prerequisites
 	cd ..
 fi
 
-cd $PREFIX
-pwd
+cd $BUILD
 
-../gcc-$GCCVER/configure --prefix=$PREFIX --enable-plugin --enable-languages=c,c++ --disable-multilib --disable-nls
+../gcc-$GCCVER/configure --prefix=$INSTALL --enable-plugin --enable-languages=c,c++ --disable-multilib --disable-nls
 
 make
+make install
