@@ -1,0 +1,23 @@
+main ()
+{
+  int D.2183;
+  int D.2186;
+  int x;
+  int y;
+  int z;
+  int result;
+
+  x = 5;
+  y = 10;
+  z = 2;
+  D.2183 = x * y;
+  result = D.2183 * z;
+  if (result == 100) goto <D.2184>; else goto <D.2185>;
+  <D.2184>:
+  printf ("%d\n", result);
+  <D.2185>:
+  D.2186 = 0;
+  return D.2186;
+}
+
+

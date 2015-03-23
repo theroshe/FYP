@@ -1,0 +1,25 @@
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  unsigned int number = 2;
+  unsigned int exponent = 2;
+  unsigned int i;
+
+    unsigned int number = 2;
+    unsigned int exponent = 2;
+    unsigned int i;
+  i = 1;
+  goto <D.2184>;
+  <D.2183>:;
+  number = number * number;
+  i++ ;
+  <D.2184>:;
+  if (i < exponent) goto <D.2183>; else goto <D.2185>;
+  <D.2185>:;
+  printf ((const char * restrict) "Result: %d\n", number);
+  return 0;
+}
+
