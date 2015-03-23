@@ -1,5 +1,7 @@
 # FYP
-Software developed during my final year project work in which I explored the possibility of modifying GCC to implement processor specific features (particularly compiler support for ARM Cortex M3 Bit Banding).
+This project was developed as part of my final year of unviersity. 
+
+I explored the possibility of modifying GCC to implement processor specific features (particularly compiler support for ARM Cortex M3 Bit Banding).
 
 The plugin directory contains the bit_band plugin, which adds support originally found in armcc.
 
