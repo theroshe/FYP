@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VER=1.20.0
-INSTALL=/home/rob/fyp/crosstool-ng
+INSTALL=$(pwd)/crosstool-ng
 
 if [ ! -d $INSTALL ]; then
 	mkdir $INSTALL

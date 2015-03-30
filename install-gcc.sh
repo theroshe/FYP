@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GCCVER=4.9.2
+GCCVER=4.9.1
 
 BUILD="$(pwd)/gcc/output"
 INSTALL="$(pwd)/install"
