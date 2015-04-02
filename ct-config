@@ -1,9 +1,8 @@
 #
 # Automatically generated make config: don't edit
 # crosstool-NG 1.20.0 Configuration
-# Mon Mar 30 20:38:40 2015
+# Thu Apr  2 14:22:13 2015
 #
-CT_CONFIGURE_has_make381=y
 CT_CONFIGURE_has_xz=y
 CT_CONFIGURE_has_cvs=y
 CT_CONFIGURE_has_svn=y
@@ -25,7 +24,7 @@ CT_MODULES=y
 #
 CT_LOCAL_TARBALLS_DIR=""
 CT_WORK_DIR="${CT_TOP_DIR}/.build"
-CT_PREFIX_DIR="${HOME}/fyp/install"
+CT_PREFIX_DIR="${HOME}/fyp/cross"
 CT_INSTALL_DIR="${CT_PREFIX_DIR}"
 CT_RM_RF_PREFIX_DIR=y
 CT_REMOVE_DOCS=y

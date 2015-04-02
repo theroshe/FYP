@@ -3,7 +3,7 @@
 GCCVER=4.9.1
 
 BUILD="$(pwd)/gcc/output"
-INSTALL="$(pwd)/install"
+INSTALL="$(pwd)/native"
 
 if [ ! -d gcc ]; then
 	mkdir gcc
