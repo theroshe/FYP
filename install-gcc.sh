@@ -2,14 +2,15 @@
 
 GCCVER=4.9.1
 
-BUILD="$(pwd)/gcc/output"
-INSTALL="$(pwd)/native"
+ROOT="$(pwd)/gcc-build"
+BUILD="$ROOT/output"
+INSTALL="$(pwd)/gcc-native"
 
-if [ ! -d gcc ]; then
-	mkdir gcc
+if [ ! -d $ROOT ]; then
+	mkdir $ROOT
 fi
 
-cd gcc
+cd $ROOT
 
 if [ ! -f gcc-$GCCVER.tar.gz ]; then
 	wget ftp://ftp.gnu.org/gnu/gcc/gcc-$GCCVER/gcc-$GCCVER.tar.gz
