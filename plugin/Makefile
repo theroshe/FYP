@@ -2,11 +2,11 @@ GCCPATH=/home/rob/fyp/gcc-native/bin/
 
 SOURCE=plugin.c
 PLUGINDIR:=$(shell $(GCCPATH)g++ -print-file-name=plugin)
-FLAGS= -fPIC -I$(PLUGINDIR)/include 
+FLAGS= -fPIC -shared -I$(PLUGINDIR)/include
 
 
 plugin.so: $(SOURCE)
-	$(GCCPATH)g++ -shared $^ -o $@ $(FLAGS) -g
+	$(GCCPATH)g++ $^ -o $@ $(FLAGS)
 
 clean:
 	rm plugin.so
