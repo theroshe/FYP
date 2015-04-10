@@ -17,6 +17,12 @@ int plugin_is_GPL_compatible;
 static unsigned int includeCount = 0;
 static unsigned int intCount = 0;
 
+typedef struct pluginStats {
+  int includeCount;
+  int intCount;
+};
+
+
 
 //Node to which the atribute will be applied
 //Name of the attribute

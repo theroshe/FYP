@@ -2,8 +2,8 @@
 
 GCCVER=4.9.1
 
-ROOT="$(pwd)/gcc-build"
-BUILD="$ROOT/output"
+ROOT="$(pwd)/gcc-native-build"
+BUILD="$ROOT/build"
 INSTALL="$(pwd)/gcc-native"
 
 if [ ! -d $ROOT ]; then
