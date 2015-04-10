@@ -1,4 +1,4 @@
-GCCPATH=/home/rob/fyp/gcc-native/bin/
+GCCPATH=../gcc-native/bin/
 
 SOURCE=plugin.c
 PLUGINDIR:=$(shell $(GCCPATH)g++ -print-file-name=plugin)
