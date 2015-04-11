@@ -1,0 +1,19 @@
+
+Todo:
+
+	Get better examples for GENERIC and GIMPLE
+	Insert dump excerpts
+	Particularly how operators are handled
+	Figure out the functions needed to reproduce this
+	How to create new variables
+
+	Test freeRTOS 
+	Create bit banding application
+	Profile with the saleae
+	
+	Find references for low power systems and SRAM
+
+	Flesh out / create new plugin examples
+	Provide top level description of the operations performed
+	Write python and/or melt examples
+	
