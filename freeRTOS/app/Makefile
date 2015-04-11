@@ -83,19 +83,25 @@ CFLAGS+= -I$(GCCROOT)/$(GCCPREFIX)/include
 #CFLAGS+= -I../newlib-arm-none-eabi/arm-none-eabi/newlib/libc/include
 
 # Build executable 
-$(ELF) : $(OBJSP)
+$(ELF): $(OBJSP)
 	$(LD) $(LDFLAGS) -o $@ $(OBJSP) $(LDLIBS)
 
+
+
 # compile and generate dependency info
-$(OBJDIR)/%.o: %.c
+$(OBJDIR)/%.o: %.c $(OBJDIR)
 	$(CC) -c $(CFLAGS) $< -o $@
 	$(CC) -MM $(CFLAGS) $< > $(OBJDIR)/$*.d 
 
 $(OBJDIR)/%.o: %.s
 	$(CC) -c $(CFLAGS) $< -o $@
 
+$(OBJDIR):
+	mkdir $(OBJDIR)
+
 clean:
 	rm -f $(OBJDIR)/*.o $(OBJSP:.o=.d) $(ELF) *~
+	rm -rf $(OBJDIR)
 
 debug: $(ELF)
 	arm-none-eabi-gdb $(ELF)
