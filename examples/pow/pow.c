@@ -7,8 +7,9 @@ int main(int argc, char** argv)
     unsigned int exponent = 2;
     unsigned int i;
 
-    for(i = 1; i < exponent; i++)
-        number *= number;
+    for(i = 1; i < exponent; i++) {
+        number = number * number;
+    }
 
     printf("Result: %d\n", number);
 

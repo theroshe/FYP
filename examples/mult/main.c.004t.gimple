@@ -1,0 +1,23 @@
+main ()
+gimple_bind <
+  int D.2183;
+  int D.2186;
+  int x;
+  int y;
+  int z;
+  int result;
+
+  gimple_assign <integer_cst, x, 5, NULL, NULL>
+  gimple_assign <integer_cst, y, 10, NULL, NULL>
+  gimple_assign <integer_cst, z, 2, NULL, NULL>
+  gimple_assign <mult_expr, D.2183, x, y, NULL>
+  gimple_assign <mult_expr, result, D.2183, z, NULL>
+  gimple_cond <eq_expr, result, 100, <D.2184>, <D.2185>>
+  gimple_label <<D.2184>>
+  gimple_call <printf, NULL, "%d\n", result>
+  gimple_label <<D.2185>>
+  gimple_assign <integer_cst, D.2186, 0, NULL, NULL>
+  gimple_return <D.2186>
+>
+
+

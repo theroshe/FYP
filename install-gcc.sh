@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GCCVER=4.9.1
+GCCVER=4.9.2
 
 ROOT="$(pwd)/gcc-native-build"
 BUILD="$ROOT/build"
@@ -13,7 +13,7 @@ fi
 cd $ROOT
 
 if [ ! -f gcc-$GCCVER.tar.gz ]; then
-	wget ftp://ftp.gnu.org/gnu/gcc/gcc-$GCCVER/gcc-$GCCVER.tar.gz
+	wget ftp://ftp.gnu.org/gnu/gcc/gcc-$GCCVER/gcc-$GCCVER.tar.gz -t 0
 fi
 
 if [ ! -d gcc-$GCCVER ]; then

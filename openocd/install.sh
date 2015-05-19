@@ -6,5 +6,5 @@ if [ "$UID" -ne 0 ]; then
 fi
 	
 
-cd openocd-0.8.0
+cd openocd-0.7.0
 make install

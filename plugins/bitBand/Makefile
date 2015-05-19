@@ -1,4 +1,4 @@
-GCCPATH=../gcc-native/bin/
+GCCPATH=../../gcc-native/bin/
 
 SOURCE=plugin.c
 PLUGINDIR:=$(shell $(GCCPATH)g++ -print-file-name=plugin)
@@ -9,4 +9,4 @@ plugin.so: $(SOURCE)
 	$(GCCPATH)g++ $^ -o $@ $(FLAGS)
 
 clean:
-	rm plugin.so
+	rm plugin.so a.out *.original
