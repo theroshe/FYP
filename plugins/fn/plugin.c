@@ -15,7 +15,7 @@ int plugin_is_GPL_compatible;
 void event(void * gcc_data, void * user_data)
 {
   tree funcType; //Node describing function type (return type, parameters, etc.)
-  tree funcDecl;
+  tree funcDecl; //The function declaration itself
   
   funcType = build_function_type_list(void_type_node, NULL_TREE);
   
