@@ -45,7 +45,7 @@
 #define PORTE GPIOE_BASE + 0x0c //Add offset to ODR. 1400 to 17FF
 #define PERI(a,b) *((volatile unsigned int*) peri(a,b)) //Wrapper for peri()
   
-//Binary semaphore to protect PORTD (a critical resource)
+//Binary semaphore to protect PORTE (a critical resource)
 static SemaphoreHandle_t sem;
 
 //Function version of the BITBAND_PERI macro.
@@ -73,18 +73,18 @@ void conventionalToggle(void * pvParameters)
 {
   unsigned int value = 0;
   unsigned int pin = *((unsigned int*) pvParameters);
-  pin = 1 << (pin);
-  volatile unsigned int* port = PORTE;
+  pin = 1 << (pin); //Need to convert pin number to appropriate bit mask
+  //volatile unsigned int* port = PORTE;
 
   for(;;) {
-    //Attempt to take semaphore
+    //Attempt to take semaphore (unless semaphores are disabled)
     if(USE_SEMAPHORE != 1 || xSemaphoreTake(sem, 0) == pdTRUE) {
 
       //Toggle pin
       GPIO_WriteBit(GPIOE, pin, ((value != 0) ? Bit_SET : Bit_RESET)); 
       value = !value;
 
-      //Alternative method
+      //Alternative method (not working)
       //*port = value;
       //value ^= pin;
       
@@ -108,14 +108,6 @@ void vGreenToggleTask()
   }
 }
 
-/*void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
-{
-  ( void ) pxTask;
-  ( void ) pcTaskName;
-  
-  for( ;; );
-  }*/
-
 int main(void) 
 {
   unsigned int pins[16];
@@ -138,6 +130,7 @@ int main(void)
   vParTestInitialise();
 
   for(i = 0; i < TASK_COUNT; i++) {
+    //pins[] contains pin numbers to pass to tasks. The function expects pointers, so 'i' won't work.
     pins[i] = i;
     
     //Pins 0 - 3 use bit banding, 4-7 use conventional IO
@@ -148,6 +141,7 @@ int main(void)
     
   }
 
+ //Use either of these to toggle the LED once or continuously; useful to spot crashes
   //xTaskCreate(vGreenToggleTask, "ToggleLED", 64, NULL, LED_PRIORITY, NULL);
   vParTestToggleLED(0);
 
