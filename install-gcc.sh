@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GCCVER=4.9.2
+GCCVER=4.8.4
 
 ROOT="$(pwd)/gcc-native-build"
 BUILD="$ROOT/build"

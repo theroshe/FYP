@@ -1,0 +1,8 @@
+
+Peripheral bit band region is 40000000 to 40100000
+
+Create new function and insert it somewhere
+Maybe define an empty function with an attribute
+Replace all marked functions with this new one?
+
+Look for modify_exprs, edit / replace them
